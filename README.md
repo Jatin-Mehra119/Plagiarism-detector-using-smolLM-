@@ -71,8 +71,8 @@ The model achieved **99.66% accuracy** on the training dataset, highlighting its
     
     Copy code
     
-    `git clone https://github.com/YourUsername/Plagiarism-Detection-App.git
-    cd Plagiarism-Detection-App` 
+    `git clone https://github.com/jatinmehra119/Plagiarism-detector-using-smolLM-.git
+    cd Plagiarism-detector-using-smolLM-` 
     
 2.  Install the required dependencies:
     

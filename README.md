@@ -34,6 +34,10 @@ The app leverages a **custom fine-tuned version of the SmolLM** (135M parameters
 
 The fine-tuning dataset, the MIT Plagiarism Detection Dataset, provides labeled sentence pairs where each pair is marked as plagiarized or non-plagiarized. This label is used for binary classification, making it well-suited for detecting sentence-level similarity.
 
+- Train: 70%
+- Validation: 10% 
+- Test: 20%
+
 ## Training and Model Details
 
 -   **Architecture**: The model was modified for sequence classification with two labels.
@@ -43,7 +47,31 @@ The fine-tuning dataset, the MIT Plagiarism Detection Dataset, provides labeled 
 -   **Epochs**: 3
 -   **Padding**: Custom padding token to align with SmolLM requirements.
 
-The model achieved **99.66% accuracy** on the training dataset, highlighting its effectiveness in identifying plagiarized content.
+## Results and Evaluation
+### Validation sets
+- Accuracy: 96.05% 
+- Test set:
+
+  # Classification Report
+
+**Accuracy**: 96.20%
+
+| Class | Precision | Recall | F1-Score | Support |
+|-------|-----------|--------|----------|---------|
+| 0     | 0.96      | 0.97   | 0.96     | 36,586  |
+| 1     | 0.97      | 0.96   | 0.96     | 36,888  |
+
+**Overall Metrics**:
+- **Accuracy**: 0.96
+- **Macro Average**:
+  - Precision: 0.96
+  - Recall: 0.96
+  - F1-Score: 0.96
+- **Weighted Average**:
+  - Precision: 0.96
+  - Recall: 0.96
+  - F1-Score: 0.96
+- **Total Support**: 73,474
 
 ## Application Workflow
 
@@ -67,49 +95,28 @@ The model achieved **99.66% accuracy** on the training dataset, highlighting its
 
 1.  Clone the repository:
     
-    bash
-    
-    Copy code
-    
-    `git clone https://github.com/jatinmehra119/Plagiarism-detector-using-smolLM-.git
-    cd Plagiarism-detector-using-smolLM-` 
+    ```
+    git clone https://github.com/jatinmehra119/Plagiarism-detector-using-smolLM-.git
+    cd Plagiarism-detector-using-smolLM-
+    ```
     
 2.  Install the required dependencies:
-    
-    bash
-    
-    Copy code
-    
-    `pip install -r requirements.txt` 
-    
+    ```
+    pip install -r requirements.txt
+    ```
 3.  Download the fine-tuned model files and place them in the `model/` directory.
     
 ### Running the App
 
 Run the Streamlit app from the terminal:
-
-bash
-
-Copy code
-
-`streamlit run app.py` 
-
+```
+streamlit run app.py
+```
 ### Usage
 
 1.  Open the application in your browser (default at `http://localhost:8501`).
 2.  Upload two PDF files you wish to compare for plagiarism.
 3.  View the text from each document and the resulting plagiarism detection output.
-
-## Evaluation
-
-The model was evaluated on both training and test data, showing robust results:
-
--   **Training Set Accuracy**: **99.66%**
--   **Test Set Accuracy**: **100%**
--   **F1 Score**: **1.0**
--   **Recall**: **1.0**
-
-These metrics indicate the model's high effectiveness in detecting plagiarism.
 
 ## Model and Tokenizer
 

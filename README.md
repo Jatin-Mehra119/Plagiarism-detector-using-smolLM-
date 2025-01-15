@@ -6,6 +6,9 @@ App link: https://jatinmehra-plagiarism-detector-using-smollm.hf.space/
 Fine tuned Model: https://huggingface.co/jatinmehra/smolLM-fined-tuned-for-PLAGAIRISM_Detection
 ---
 
+![image](https://github.com/user-attachments/assets/d582eef8-224b-4f08-8f71-915e05dc1579)
+
+
 # Plagiarism Detection App Using a Fine-Tuned Language Model (LLM)
 
 This repository contains a Streamlit-based web application that uses a fine-tuned LLM model for detecting plagiarism between two documents. The application processes two uploaded PDF files, extracts their content, and classifies them as either plagiarized or non-plagiarized based on a fine-tuned language model.
